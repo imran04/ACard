@@ -1,0 +1,30 @@
+﻿@model Offers.Core.Deal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Deal</legend>
+
+    <div class="display-label">DealName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DealName)
+    </div>
+
+    <div class="display-label">ShortDesc</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ShortDesc)
+    </div>
+
+    <div class="display-label">FullDesc</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FullDesc)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.DealId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

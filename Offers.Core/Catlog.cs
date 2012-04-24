@@ -6,10 +6,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Offers.Core
 {
-    class Catlog
+    public  class Catlog
     {
         [Key]
+        public int CatLogId{get;set;}
         public string Name { get; set; }
+        public string Desc { get; set; }
         public virtual ICollection<Deal> Deals { get; set; }
     }
 }

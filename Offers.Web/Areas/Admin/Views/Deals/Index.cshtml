@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Offers.Core.Deal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            DealName
+        </th>
+        <th>
+            ShortDesc
+        </th>
+        <th>
+            FullDesc
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DealName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShortDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DealId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DealId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DealId })
+        </td>
+    </tr>
+}
+
+</table>

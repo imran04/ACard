@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Offers.Core
 {
-    class Deal
+    public class Deal
     {
         [Key]
         public Guid DealId { get; set; }

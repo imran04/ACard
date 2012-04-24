@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace Offers.Core
 {
-    class DataContext:DbContext
+    public class DataContext:DbContext
     {
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
