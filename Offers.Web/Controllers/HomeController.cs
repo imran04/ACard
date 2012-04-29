@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Offers.Core;
 
 namespace Offers.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IRepository repository;
+        public HomeController(IRepository productRepository) {
+        repository = productRepository;
+        }
+
+        public HomeController()
+        {
+            // TODO: Complete member initialization
+        }
         public ActionResult Index()
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
@@ -19,5 +29,10 @@ namespace Offers.Web.Controllers
         {
             return View();
         }
+        public ActionResult Offers(int id)
+        {
+            return View(repository.Deals.Where(i => i.Catlog.CatLogId == id));
+        }
+        
     }
 }

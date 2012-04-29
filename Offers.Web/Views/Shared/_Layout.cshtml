@@ -42,23 +42,16 @@
     </div>
     <section style="min-height:500px;">
     <div class="container">
-    @if (IsSectionDefined("Side"))
-    {
+    
     <div class="row-fluid">
         <div class="span3">
-        @RenderSection("Side")
+        @{Html.RenderAction("RightNav","Partial");}
         </div>
    <div class="span9"> @RenderBody()</div>
       
       
     </div>
-    }
-    else
-    {<text>
-    @RenderBody()
-    </text>
-
-    }
+    
     </div> <!-- /container -->
     </section>
     <!-- Le javascript

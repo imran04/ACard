@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Offers.Core.Catlog>
-
-<ul class="nav nav-list">
-
+<div class="well sidebar-nav">
+<h3>Category</h3>
+    <ul class="nav nav-list">
 @foreach (var item in Model) {
    <li>
    <a href="@Url.Action("Offers", "Home", new {id=item.CatLogId })">@item.Name</a>
    </li>
 }
-
-</ul>
+    </ul>
+</div>

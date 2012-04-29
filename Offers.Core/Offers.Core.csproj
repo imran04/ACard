@@ -59,6 +59,7 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="DataContextInitializer.cs" />
     <Compile Include="Deal.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Membership.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="RoleProvider.cs" />

@@ -200,6 +200,7 @@
     <None Include="less\wells.less" />
     <Content Include="Views\Shared\_Side.cshtml" />
     <Content Include="Views\Partial\RightNav.cshtml" />
+    <Content Include="Views\Home\Offers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Offers.Core\Offers.Core.csproj">

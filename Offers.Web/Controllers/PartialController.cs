@@ -10,13 +10,16 @@ namespace Offers.Web.Controllers
     public class PartialController : Controller
     {
 
-        private DataContext dc = new DataContext();
+       private IRepository repository;
+        public PartialController(IRepository productRepository) {
+        repository = productRepository;
+        }
         
         [ChildActionOnly]
         public ActionResult RightNav()
         {
-            var cat = dc.CatLogs.ToList();   
-            return PartialView();
+            var cat = repository.CatLogs.ToList();   
+            return PartialView(cat);
         }
 
     }
